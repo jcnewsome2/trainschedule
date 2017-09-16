@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Train Schedule</title>
+		<link rel="stylesheet" type="text/css" href="reset.css">
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+		<link rel="stylesheet" type="text/css" href="style.css">
+	</head>
+	<body>
+		<div class="container">
+			<div class="jumbotron">
+				<h1> Anytime is Train Time</h1>
+				<p>Choo Choo. Chee Chee </p>
+			</div>
+			<div id="tableBorder">
+				<div id="tableHeader"><p>Current Train Schedule</p></div>
+				<table class="table">
+					<thead>
+						<tr>
+							<th>Train Name</th>
+							<th>Destination</th>
+							<th>Frequency (min)</th>
+							<th>Next Arrival</th>
+							<th>Minutes Away</th>
+						</tr>
+					</thead>
+					<tbody>
+						<tr>
+							<td>Thomas the Tank Engine</td>
+							<td>Plano</td>
+							<td>15</td>
+							<td>11:11</td>
+							<td>10</td>
+						</tr>
+					</tbody>
+				</table>
+			</div>
+			<br>
+			<div class="time"><p>Current Time</p><span id="currentTime"></span></div>
+			<br>
+			<div id="tableHeader"><p>Add Train</p></div>
+			
+			<form class="addTrainForm">
+				<div class="row">
+					<div class="col-xs-8 col-xs-offset-2">
+						<form id="newEmployeeForm">
+							<div class="form-group">
+								<label>Train Name</label>
+								<input type="text" id="trainName" class="form-control" placeholder="Thomas the Tank train ">
+							</div>
+							<div class="form-group">
+								<label>Destination</label>
+								<input type="text" id="destination" class="form-control" placeholder="TX-Dallas">
+							</div>
+							<div class="form-group">
+								<label>First Train Time (HH:mm - Military Time)</label>
+								<input type="text" id="firstTrain" class="form-control" placeholder="11:11">
+							</div>
+							<div class="form-group">
+								<label>Frenquency (Minutes)</label>
+								<input type="text" id="frequency" class="form-control" placeholder="15">
+							</div>
+							
+							
+							<div class="form-group text-center">
+								<button class="btn btn-primary" id="submit">
+								Submit
+								</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</form>
+		</div>
+	</body>
+	<script src="https://cdn.jsdelivr.net/momentjs/2.12.0/moment.min.js"></script>
+	<script src="https://code.jquery.com/jquery.js"></script>
+	<script src="https://www.gstatic.com/firebasejs/4.3.1/firebase.js">
+	</script>
+	<script type="text/javascript" src="train.js"></script>
+</body>
+</html>
